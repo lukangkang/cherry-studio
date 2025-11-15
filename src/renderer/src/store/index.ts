@@ -65,7 +65,7 @@ const rootReducer = combineReducers({
 
 const persistedReducer = persistReducer(
   {
-    key: 'cherry-studio',
+    key: 'xiaocaseai-studio',
     storage,
     version: 174,
     blacklist: ['runtime', 'messages', 'messageBlocks', 'tabs', 'toolPermissions'],

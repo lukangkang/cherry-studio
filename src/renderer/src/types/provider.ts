@@ -179,7 +179,8 @@ export const SystemProviderIds = {
   longcat: 'longcat',
   huggingface: 'huggingface',
   'ai-gateway': 'ai-gateway',
-  cerebras: 'cerebras'
+  cerebras: 'cerebras',
+  'xiaocase-api': 'xiaocase-api'
 } as const
 
 export type SystemProviderId = keyof typeof SystemProviderIds

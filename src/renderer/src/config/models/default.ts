@@ -1873,5 +1873,6 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       provider: 'cerebras',
       group: 'qwen'
     }
-  ]
+  ],
+  'xiaocase-api': []
 }
