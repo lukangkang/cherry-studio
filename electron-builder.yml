@@ -1,5 +1,5 @@
-appId: com.kangfenmao.CherryStudio
-productName: Cherry Studio
+appId: com.xiaocaseai.XiaocaseAIStudio
+productName: 小Case AI Studio
 electronLanguages:
   - zh-CN
   - zh-TW
@@ -14,9 +14,9 @@ directories:
   buildResources: build
 
 protocols:
-  - name: Cherry Studio
+  - name: 小Case AI Studio
     schemes:
-      - cherrystudio
+      - xiaocaseaistudio
 files:
   - "**/*"
   - "!**/{.vscode,.yarn,.yarn-lock,.github,.cursorrules,.prettierrc}"
@@ -73,7 +73,7 @@ extraResources:
     to: "claude-code-plugins"
 
 win:
-  executableName: Cherry Studio
+  executableName: 小Case AI Studio
   artifactName: ${productName}-${version}-${arch}-setup.${ext}
   target:
     - target: nsis

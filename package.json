@@ -1,11 +1,11 @@
 {
-  "name": "CherryStudio",
+  "name": "xiaocase-ai-studio",
   "version": "1.7.0-rc.1",
   "private": true,
   "description": "A powerful AI assistant for producer.",
   "main": "./out/main/index.js",
   "author": "support@cherry-ai.com",
-  "homepage": "https://github.com/CherryHQ/cherry-studio",
+  "homepage": "https://api.xiaocaseai.com",
   "engines": {
     "node": ">=22.0.0"
   },
@@ -263,6 +263,7 @@
     "electron": "38.7.0",
     "electron-builder": "26.1.0",
     "electron-devtools-installer": "^3.2.0",
+    "electron-icon-builder": "^2.0.1",
     "electron-reload": "^2.0.0-alpha.1",
     "electron-store": "^8.2.0",
     "electron-updater": "patch:electron-updater@npm%3A6.7.0#~/.yarn/patches/electron-updater-npm-6.7.0-47b11bb0d4.patch",

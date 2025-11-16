@@ -85,7 +85,7 @@ export const CHERRYAI_PROVIDER: SystemProvider = {
   enabled: true
 }
 
-export const SYSTEM_PROVIDERS_CONFIG: Record<SystemProviderId, SystemProvider> = {
+export const SYSTEM_PROVIDERS_CONFIG: Partial<Record<SystemProviderId, SystemProvider>> = {
   'xiaocase-api': {
     id: 'xiaocase-api',
     name: 'XiaoCase API',
