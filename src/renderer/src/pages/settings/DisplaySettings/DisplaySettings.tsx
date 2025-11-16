@@ -18,7 +18,7 @@ import {
   setSidebarIcons
 } from '@renderer/store/settings'
 import { ThemeMode } from '@renderer/types'
-import { Button, ColorPicker, Segmented, Select, Switch } from 'antd'
+import { Button, ColorPicker, Segmented, Select, Switch, Tag } from 'antd'
 import { Minus, Monitor, Moon, Plus, Sun } from 'lucide-react'
 import type { FC } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
@@ -27,6 +27,7 @@ import styled from 'styled-components'
 
 import { SettingContainer, SettingDivider, SettingGroup, SettingRow, SettingRowTitle, SettingTitle } from '..'
 import SidebarIconsManager from './SidebarIconsManager'
+import { themes } from '@renderer/assets/themes'
 
 const ColorCircleWrapper = styled.div`
   width: 24px;
@@ -424,13 +425,28 @@ const DisplaySettings: FC = () => {
       <SettingGroup theme={theme}>
         <SettingTitle>
           {t('settings.display.custom.css.label')}
-          <TitleExtra onClick={() => window.api.openWebsite('https://cherrycss.com/')}>
-            {t('settings.display.custom.css.cherrycss')}
-          </TitleExtra>
+          <Select
+            style={{ width: 280, marginBottom: 12 }}
+            placeholder="切换主题"
+            options={themes.map((th) => ({
+              value: th.id,
+              label: (
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 6 }}>
+                  <span>{th.name}</span>
+                  <Tag>{th.category === 'chineseStyle' ? '中国风' : '其他'}</Tag>
+                </div>
+              )
+            }))}
+            onChange={(id) => {
+              const th = themes.find((t) => t.id === id)
+              if (th) dispatch(setCustomCss(th.css))
+            }}
+            showSearch
+          />
         </SettingTitle>
         <SettingDivider />
         <CodeEditor
-          value={customCss}
+          value={customCss || claude.css}
           language="css"
           placeholder={t('settings.display.custom.css.placeholder')}
           onChange={(value) => dispatch(setCustomCss(value))}
