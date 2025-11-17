@@ -29,7 +29,8 @@
       "@cherrystudio/ai-core/*": ["./packages/aiCore/src/*"],
       "@cherrystudio/ai-core": ["./packages/aiCore/src/index.ts"],
       "@cherrystudio/extension-table-plus": ["./packages/extension-table-plus/src/index.ts"],
-      "@cherrystudio/ai-sdk-provider": ["./packages/ai-sdk-provider/src/index.ts"]
+      "@cherrystudio/ai-sdk-provider": ["./packages/ai-sdk-provider/src/index.ts"],
+      "@/*": ["./src/renderer/src/*"]
     },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

@@ -1,4 +1,4 @@
-import type { Theme } from './types'
+import type { Theme } from '../../lib/types'
 
 // 读取当前目录下的所有主题 TS 文件（排除 index.ts / types.ts）
 const modules = import.meta.glob('./*.ts', { eager: true })

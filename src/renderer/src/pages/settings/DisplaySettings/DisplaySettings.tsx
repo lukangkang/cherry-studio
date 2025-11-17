@@ -446,7 +446,7 @@ const DisplaySettings: FC = () => {
         </SettingTitle>
         <SettingDivider />
         <CodeEditor
-          value={customCss || claude.css}
+          value={customCss || (themes.find((t) => t.id === 'claude')?.css || '')}
           language="css"
           placeholder={t('settings.display.custom.css.placeholder')}
           onChange={(value) => dispatch(setCustomCss(value))}
