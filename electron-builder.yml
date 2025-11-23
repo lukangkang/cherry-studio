@@ -106,6 +106,7 @@ mac:
     - target: dmg
     - target: zip
 linux:
+  icon: build/icon.png
   artifactName: ${productName}-${version}-${arch}.${ext}
   target:
     - target: AppImage
